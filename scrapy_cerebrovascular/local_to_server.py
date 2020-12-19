@@ -3,9 +3,9 @@
 """
 from sqlalchemy import Table
 
-from .model import CerebrovascularDiseases, Base
-from .properties import BIT_URI, SQLALCHEMY_DATABASE_URI
-from .pg_connection import connection
+from scrapy_cerebrovascular.model import CerebrovascularDiseases, Base
+from scrapy_cerebrovascular.properties import BIT_URI, SQLALCHEMY_DATABASE_URI
+from scrapy_cerebrovascular.pg_connection import connection
 
 
 class LocalToServer(object):

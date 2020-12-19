@@ -2,10 +2,10 @@ import time
 
 from sqlalchemy import Table
 import re
-from .model import CerebrovascularDiseases, CDtoC, Base
-from .pg_connection import new_connection
-from .scrapy_message import ScrapyMe
-from .util.translate import translate
+from scrapy_cerebrovascular.model import CerebrovascularDiseases, CDtoC, Base
+from scrapy_cerebrovascular.pg_connection import new_connection
+from scrapy_cerebrovascular.scrapy_message import ScrapyMe
+from scrapy_cerebrovascular.util.translate import translate
 
 
 class ScrapyHtml(object):
@@ -52,10 +52,10 @@ class ScrapyHtml(object):
         """
             利用有道API 翻译英文并存储
         """
-        if 'cerebrovascularc' in self.engine.table_names():
-            table = Table("cerebrovascularc", Base.metadata, autoload=True)
-            table.drop(self.engine)
-        CDtoC.metadata.create_all(self.engine)
+        # if 'cerebrovascularc' in self.engine.table_names():
+        #     table = Table("cerebrovascularc", Base.metadata, autoload=True)
+        #     table.drop(self.engine)
+        # CDtoC.metadata.create_all(self.engine)
         # if 'cerebrovascularc' not in self.engine.table_names():
         #     CDtoC.metadata.create_all(self.engine)
         tra_rank = [i.nctNumber for i in self.session.query(CDtoC).order_by(CDtoC.rank).all()]
