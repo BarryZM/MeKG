@@ -4,4 +4,8 @@
 
 ## 数据爬虫
 
-详见 scrapy_cerebrovascular 目录 readme
+scrapy_cerebrovascular目录
+
+## 构建知识图谱
+
+create_kg目录

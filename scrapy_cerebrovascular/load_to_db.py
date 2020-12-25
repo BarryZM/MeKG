@@ -2,8 +2,8 @@ from sqlalchemy import Table
 from sqlalchemy.exc import IntegrityError
 
 from scrapy_cerebrovascular.model import Base, CerebrovascularDiseases
-from scrapy_cerebrovascular.pg_connection import connection
-from scrapy_cerebrovascular.util.csv_operation import read_csv
+from util.pg_connection import connection
+from util.csv_operation import read_csv
 
 
 class LoadToDB:

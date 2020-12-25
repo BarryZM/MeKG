@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import sessionmaker
 
-from scrapy_cerebrovascular.properties import SQLALCHEMY_DATABASE_URI, BIT_URI
+from properties import SQLALCHEMY_DATABASE_URI
 
 
 def connection():

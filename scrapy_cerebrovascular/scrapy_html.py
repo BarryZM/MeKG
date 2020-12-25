@@ -1,11 +1,7 @@
-import time
-
-from sqlalchemy import Table
-import re
-from scrapy_cerebrovascular.model import CerebrovascularDiseases, CDtoC, Base
-from scrapy_cerebrovascular.pg_connection import new_connection
+from scrapy_cerebrovascular.model import CerebrovascularDiseases, CDtoC
+from util.pg_connection import new_connection
 from scrapy_cerebrovascular.scrapy_message import ScrapyMe
-from scrapy_cerebrovascular.util.translate import translate
+from util.translate import translate
 
 
 class ScrapyHtml(object):

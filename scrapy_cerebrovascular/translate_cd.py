@@ -1,4 +1,4 @@
-from scrapy_cerebrovascular.pg_connection import new_connection
+from util.pg_connection import new_connection
 from scrapy_cerebrovascular.scrapy_html import ScrapyHtml
 
 engine, session = new_connection()
